@@ -61,12 +61,76 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.hyperglue">module hyperglue</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.hyperglue.hyperglue">
+            function <span class="apidocSignatureSpan"></span>hyperglue
+            <span class="apidocSignatureSpan">(src, updates)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.hyperglue" id="apidoc.module.hyperglue">module hyperglue</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.hyperglue.hyperglue" id="apidoc.element.hyperglue.hyperglue">
+        function <span class="apidocSignatureSpan"></span>hyperglue
+        <span class="apidocSignatureSpan">(src, updates)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hyperglue(src, updates) {
+    if (!updates) updates = {};
+
+    var dom = typeof src === &#x27;object&#x27; ? [ src ] : domify(src);
+    if (!outer) outer = document.createElement(&#x27;div&#x27;);
+
+    forEach(objectKeys(updates), function (selector) {
+        var value = updates[selector];
+        forEach(dom, function (d) {
+            var parentNode = d.parentNode;
+
+            if (selector === &#x27;:first&#x27;) {
+                bind(d, value);
+            }
+            else if (/:first$/.test(selector)) {
+                var k = selector.replace(/:first$/, &#x27;&#x27;);
+                if (parentNode) parentNode.removeChild(d);
+                outer.appendChild(d);
+
+                var elem = outer.querySelector(k);
+                outer.removeChild(d);
+
+                if (parentNode) parentNode.appendChild(d);
+                if (elem) bind(elem, value);
+            }
+            else {
+                if (parentNode) parentNode.removeChild(d);
+                outer.appendChild(d);
+
+                var nodes = d.parentNode.querySelectorAll(selector);
+                outer.removeChild(d);
+
+                if (parentNode) parentNode.appendChild(d);
+
+                if (nodes.length === 0) return;
+                for (var i = 0; i &#x3c; nodes.length; i++) {
+                    bind(nodes[i], value);
+                }
+            }
+        });
+    });
+    return dom.length === 1 ? dom[0] : dom;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

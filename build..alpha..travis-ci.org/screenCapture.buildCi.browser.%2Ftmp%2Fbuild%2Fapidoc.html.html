@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/substack/hyperglue"
-
-    >hyperglue (v2.0.1)</a>
+    <a href="https://github.com/substack/hyperglue">hyperglue (v2.0.1)</a>
 </h1>
 <h4>update html elements by mapping query selectors to attributes, text, and hypertext</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.hyperglue">module hyperglue</a><ol>
 
@@ -88,19 +81,19 @@
     <li>description and source-code<pre class="apidocCodePre">function hyperglue(src, updates) {
     if (!updates) updates = {};
 
-    var dom = typeof src === &#x27;object&#x27; ? [ src ] : domify(src);
-    if (!outer) outer = document.createElement(&#x27;div&#x27;);
+    var dom = typeof src === 'object' ? [ src ] : domify(src);
+    if (!outer) outer = document.createElement('div');
 
     forEach(objectKeys(updates), function (selector) {
         var value = updates[selector];
         forEach(dom, function (d) {
             var parentNode = d.parentNode;
 
-            if (selector === &#x27;:first&#x27;) {
+            if (selector === ':first') {
                 bind(d, value);
             }
             else if (/:first$/.test(selector)) {
-                var k = selector.replace(/:first$/, &#x27;&#x27;);
+                var k = selector.replace(/:first$/, '');
                 if (parentNode) parentNode.removeChild(d);
                 outer.appendChild(d);
 
@@ -120,7 +113,7 @@
                 if (parentNode) parentNode.appendChild(d);
 
                 if (nodes.length === 0) return;
-                for (var i = 0; i &#x3c; nodes.length; i++) {
+                for (var i = 0; i &lt; nodes.length; i++) {
                     bind(nodes[i], value);
                 }
             }
@@ -140,3 +133,4 @@
     ]
 </div>
 </div>
+</body></html>
