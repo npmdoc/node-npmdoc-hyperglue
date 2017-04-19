@@ -1,9 +1,14 @@
-# api documentation for  [hyperglue (v2.0.1)](https://github.com/substack/hyperglue)  [![npm package](https://img.shields.io/npm/v/npmdoc-hyperglue.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hyperglue) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hyperglue.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hyperglue)
+# npmdoc-hyperglue
+
+#### api documentation for  [hyperglue (v2.0.1)](https://github.com/substack/hyperglue)  [![npm package](https://img.shields.io/npm/v/npmdoc-hyperglue.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-hyperglue) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-hyperglue.svg)](https://travis-ci.org/npmdoc/node-npmdoc-hyperglue)
+
 #### update html elements by mapping query selectors to attributes, text, and hypertext
 
-[![NPM](https://nodei.co/npm/hyperglue.png?downloads=true)](https://www.npmjs.com/package/hyperglue)
+[![NPM](https://nodei.co/npm/hyperglue.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/hyperglue)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-hyperglue/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-hyperglue_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-hyperglue/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-hyperglue/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-hyperglue/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-hyperglue/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-hyperglue/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-hyperglue/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "James Halliday",
-        "email": "mail@substack.net",
         "url": "http://substack.net"
     },
     "bugs": {
@@ -47,13 +51,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "substack",
-            "email": "mail@substack.net"
+            "name": "substack"
         }
     ],
     "name": "hyperglue",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/substack/hyperglue.git"
@@ -74,16 +76,6 @@
     "version": "2.0.1"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module hyperglue](#apidoc.module.hyperglue)
-
-
-
-# <a name="apidoc.module.hyperglue"></a>[module hyperglue](#apidoc.module.hyperglue)
 
 
 
